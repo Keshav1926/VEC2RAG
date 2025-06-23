@@ -66,15 +66,28 @@ streamlit run app.py
 
    The full context used to generate this answer is: The provided text, which includes the eBay User Agreement, outlines the terms and conditions for using eBay's services. The agreement includes provisions such as complying with all terms of the agreement, not breaching or circumventing laws or regulations, not failing to pay for items purchased or deliver items sold, not manipulating prices or interfering with other users' listings, and not taking actions that may undermine the feedback or ratings systems. Additionally, the agreement covers payments, including the use of designated eBay entities to facilitate payments, and the requirements for buyers and sellers to accept and comply with the Payments Terms of Use. The agreement also includes an Agreement to Arbitrate, which requires users to submit claims to binding and final arbitration and provides for amendments to the agreement, with 30 days' notice to users.
 
-2. **Query:** "15 + 55"
+![Screenshot (31)](https://github.com/user-attachments/assets/defa0065-525b-4baa-9944-208ce6c39a36)
+
+3. **Query:** "15 + 55"
    
    **Answer:** The answer to the question is 70.
 
    The full context used to generate the answer is not applicable in this case, as the question "15 + 55" is a simple arithmetic operation that does not require any context from the provided text to be solved. The provided text appears to be a legal agreement or terms of service for eBay, and does not contain any relevant information for solving the mathematical question.
 
-3. **Query:** "what are the policies if i am a resident of California"
+![Screenshot (32)](https://github.com/user-attachments/assets/16d42716-cbbf-4051-94bf-be201f78de61)
+
+4. **Query:** "what are the policies if i am a resident of California"
    
    **Answer:** If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210, in accordance with Cal. Civ. Code §1789.3. 
    
    The full context used to generate the answer is: The provided text mentions that if you are a California resident, in accordance with Cal. Civ. Code §1789.3, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800)952-5210. This information is specifically related to California residents and provides a clear procedure for reporting complaints.
 
+![Screenshot (35)](https://github.com/user-attachments/assets/d16c5ef2-8499-4de4-b0c7-ea49f3a9bf96)
+
+**Clear Buttom**
+
+![Screenshot (33)](https://github.com/user-attachments/assets/d4fb9545-b088-4cc1-8fd1-725333f58531)
+
+**Conversation History**
+
+![Screenshot (34)](https://github.com/user-attachments/assets/0f215f3d-adfa-47fe-8e61-28f3827d9d2c)
