@@ -81,12 +81,8 @@ st.sidebar.write(f"**Collection:** amlgo-docs")
 st.sidebar.write(f"**Embedding model:** sentence-transformers/all-MiniLM-L6-v2")
 st.sidebar.write(f"**LLM model:** meta/llama-3.1-405b-instruct")
 st.sidebar.write(f"**Number of chunks:** 45")
-st.sidebar.write(f"**Streaming:** ✅ Enabled")
+st.sidebar.write(f"**Streaming:**  Enabled")
 
-if st.session_state.is_processing:
-    st.sidebar.write("**Status:** 🔄 Processing...")
-else:
-    st.sidebar.write("**Status:** ✅ Ready")
 
 st.sidebar.markdown("---")
 st.sidebar.write(f"**Total conversations:** {len(st.session_state.history)}")
