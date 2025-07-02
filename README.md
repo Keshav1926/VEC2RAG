@@ -2,7 +2,7 @@
 
 ## 📖 Project Overview
 
-This repository implements a Retrieval-Augmented Generation (RAG) chatbot powered by a Qdrant vector database and an NVIDIA-hosted LLM (Meta LLaMA 3.3‑70B). The pipeline covers document ingestion, chunking, embedding, vector store creation, and a Streamlit front‑end for interactive question answering.
+This repository implements a Retrieval-Augmented Generation (RAG) chatbot powered by a Qdrant vector database and an NVIDIA-hosted LLM (Meta LLaMA-3.1-405B). The pipeline covers document ingestion, chunking, embedding, vector store creation, and a Streamlit front‑end for interactive question answering.
 
 ### 🔍 Architecture & Flow
 
@@ -13,7 +13,7 @@ Raw documents (PDF, TXT)
                └─> HuggingFaceEmbeddings (all‑MiniLM‑L6‑v2)
                      └─> Qdrant vector store (collection: amlgo‑docs)
                            └─> rag_pipeline.py (RetrievalQA chain)
-                                 └─> ChatNVIDIA LLM (llama‑3.3‑70b‑instruct)
+                                 └─> ChatNVIDIA LLM (llama-3.1-405b-instruct)
                                        └─> app.py (Streamlit UI)
 ```
 
@@ -55,39 +55,44 @@ streamlit run app.py
 ## 🤖 Models & Embeddings
 
 - **Embedding Model**: `sentence‑transformers/all‑MiniLM‑L6‑v2` (384‑dim cosine)
-- **LLM**: `meta/llama‑3.3‑70b‑instruct` via `ChatNVIDIA` (streaming enabled)
+- **LLM**: `llama-3.1-405b-instruct` via `ChatNVIDIA` (streaming enabled)
 - **Vector DB**: Qdrant (self‑hosted or cloud, COSINE distance)
 
 ## 🎯 Sample Queries & Output
 
-1. **Query:** "What are our terms regarding ebay"
+**Query 1**
+
+![Screenshot (43)](https://github.com/user-attachments/assets/94eaf23e-0f0e-4c8d-844b-d57c8e3d428b)
+
+
+**Query 2**
    
-   **Answer:** Our terms regarding eBay are outlined in the User Agreement, which includes provisions such as complying with all terms of the agreement, not breaching or circumventing laws or regulations, not failing to pay for items purchased or deliver items sold, not manipulating prices or interfering with other users' listings, and not taking actions that may undermine the feedback or ratings systems.
+![Screenshot (44)](https://github.com/user-attachments/assets/4135f570-a4d7-40d6-8e41-82940d823a76)
 
-   The full context used to generate this answer is: The provided text, which includes the eBay User Agreement, outlines the terms and conditions for using eBay's services. The agreement includes provisions such as complying with all terms of the agreement, not breaching or circumventing laws or regulations, not failing to pay for items purchased or deliver items sold, not manipulating prices or interfering with other users' listings, and not taking actions that may undermine the feedback or ratings systems. Additionally, the agreement covers payments, including the use of designated eBay entities to facilitate payments, and the requirements for buyers and sellers to accept and comply with the Payments Terms of Use. The agreement also includes an Agreement to Arbitrate, which requires users to submit claims to binding and final arbitration and provides for amendments to the agreement, with 30 days' notice to users.
 
-![Screenshot (31)](https://github.com/user-attachments/assets/defa0065-525b-4baa-9944-208ce6c39a36)
+**Query 3**
 
-3. **Query:** "15 + 55"
-   
-   **Answer:** The answer to the question is 70.
+![Screenshot (45)](https://github.com/user-attachments/assets/80102d2d-f7a2-493b-a114-d2d2caccb1ad)
 
-   The full context used to generate the answer is not applicable in this case, as the question "15 + 55" is a simple arithmetic operation that does not require any context from the provided text to be solved. The provided text appears to be a legal agreement or terms of service for eBay, and does not contain any relevant information for solving the mathematical question.
 
-![Screenshot (32)](https://github.com/user-attachments/assets/16d42716-cbbf-4051-94bf-be201f78de61)
+**Query 4**
 
-4. **Query:** "what are the policies if i am a resident of California"
-   
-   **Answer:** If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210, in accordance with Cal. Civ. Code §1789.3. 
-   
-   The full context used to generate the answer is: The provided text mentions that if you are a California resident, in accordance with Cal. Civ. Code §1789.3, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800)952-5210. This information is specifically related to California residents and provides a clear procedure for reporting complaints.
+![Screenshot (46)](https://github.com/user-attachments/assets/453dd062-e0e9-462c-859d-0670634d56cf)
 
-![Screenshot (35)](https://github.com/user-attachments/assets/d16c5ef2-8499-4de4-b0c7-ea49f3a9bf96)
-
-**Clear Buttom**
-
-![Screenshot (33)](https://github.com/user-attachments/assets/d4fb9545-b088-4cc1-8fd1-725333f58531)
 
 **Conversation History**
 
-![Screenshot (34)](https://github.com/user-attachments/assets/0f215f3d-adfa-47fe-8e61-28f3827d9d2c)
+![Screenshot (47)](https://github.com/user-attachments/assets/b6994e84-c06a-4ba5-9483-5c476babc855)
+
+**Clear Buttom**
+
+![Screenshot (48)](https://github.com/user-attachments/assets/aabcc3d4-0bbc-42cf-8c18-f286a702dce1)
+
+
+**Streaming response Video**
+
+
+
+https://github.com/user-attachments/assets/1c64c4ed-36c4-4123-92f7-9f73e76bbd4f
+
+
