@@ -64,7 +64,7 @@ if clear_button:
 
 # Display current answer if exists (for page refreshes)
 if st.session_state.current_answer and not st.session_state.is_processing:
-    st.markdown(f"**Last Answer:** {st.session_state.current_answer}")
+    st.markdown(f"**Answer:** {st.session_state.current_answer}")
 
 # Bottom-expander for full conversation history
 if st.session_state.history:
